@@ -1,0 +1,31 @@
+doctype html
+
+include ../mixins/mixins
+
+html
+
+  block html
+
+    head(prefix='og: http://ogp.me/ns#')
+    
+      block head
+      
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='robots', content='index, follow')
+      
+        block css
+        
+          link(rel='stylesheet', type='text/css', media='screen', href='/css/site.min.css')
+          
+        block js
+        
+          script(src='https://code.jquery.com/jquery-3.2.1.min.js', type='text/javascript', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+          script(src='/js/bootstrap.min.js', type='text/javascript')
+          script(src='/js/site.min.js', type='text/javascript')
+          
+      
+    body
+    
+      block body
